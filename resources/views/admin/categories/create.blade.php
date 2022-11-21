@@ -4,9 +4,9 @@
 <div class="card">
     <div class="card-header">
         @if(isset($category))
-        Kategori Düzenle
+        Edit Category
         @else
-        Yeni Kategori Ekle
+        Add New Category
         @endif
     </div>
     <div class="card-body">
@@ -23,7 +23,7 @@
 
             <div class="col-md-6">
                 <div class="form-group row {{ $errors->has('name') ? 'has-error' : '' }}">
-                    {{Form::label('name', 'Başlık', ['class' => 'col-md-3 col-sm-3'])}}
+                    {{Form::label('name', 'Title', ['class' => 'col-md-3 col-sm-3'])}}
                     <div class="col-md-9 col-sm-9">
                         {{ Form::text('name', old('name'), ['class'=>'form-control']) }}
                         @if($errors->has('name'))
@@ -34,13 +34,13 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    {{Form::label('description', 'Kısa Açıklama', ['class' => 'col-md-3 col-sm-3'])}}
+                    {{Form::label('description', 'Short Description', ['class' => 'col-md-3 col-sm-3'])}}
                     <div class="col-md-9 col-sm-9">
                         {{ Form::textarea('description', null, ['class'=>'form-control', 'rows'=>3]) }}
                     </div>
                 </div>
                 <div class="form-group row">
-                    {{Form::label('parent', 'Üst Kategori', ['class' => 'col-md-3 col-sm-3'])}}
+                    {{Form::label('parent', 'Top Category', ['class' => 'col-md-3 col-sm-3'])}}
                     <div class="col-md-9 col-sm-9">
                         <div class="widget widget_tally_box">
                             <div class="x_panel">

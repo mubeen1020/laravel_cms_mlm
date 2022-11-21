@@ -15,8 +15,8 @@
                         $main_menu = Menu::get('ana-menue');
                         @endphp
                         @foreach ($main_menu['items'] as $item)
-                        <li class="{{ count($item['child']) > 0 ? "menu-item-has-children" : "" }}">
-                            <a href="{{ count($item['child']) > 0 ? "javascript:void(0);" : $item['link'] }}">
+                        <li class="{{ count($item['child']) > 0 ? "menu-item-has-children" :"error"}}">
+                            <a href="{{ count($item['child']) > 0 ? "javascript:void(0)" : $item['link'] }}">
                                 {{ $item['label'] }}
                             </a>
                             @if( count($item['child']) > 0 )
@@ -94,7 +94,7 @@
                     <div class="dl-menu__wrap dl-menuwrapper">
                         <ul class="dl-menu dl-menuopen">
                             @foreach ($main_menu['items'] as $item)
-                            <li class="{{ count($item['child']) > 0 ? "menu-item-has-children" : "" }}">
+                            <li class="{{ count($item['child']) > 0 ? "menu-item-has-children" :"error" }}">
                                 <a href="{{ count($item['child']) > 0 ? "javascript:void(0);" : $item['link'] }}">
                                     {{ $item['label'] }}
                                 </a>
@@ -127,7 +127,7 @@
             <div class="col-lg-6 col-sm-6 col-xs-12 col-xs-12">
                 <div class="popUp_social text-right">
                     @php
-                    $social_menu = Menu::get('sosyal-medya');
+                    $social_menu = Menu::get('social media');
                     @endphp
                     <ul>
                         @foreach ($social_menu['items'] as $item)

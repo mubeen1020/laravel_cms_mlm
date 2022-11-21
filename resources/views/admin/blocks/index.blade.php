@@ -8,12 +8,12 @@
         <div class="row">
             <div class="col-6">
                 <div class="module-title">
-                    Yerleşim Listesi
+                    Placement List
                 </div>
             </div>
             <div class="col-6 text-right">
                 <a class="btn btn-sm btn-success" href="{{ route("admin.blocks.create") }}">
-                    Yerleşim Ekle
+                    Add Placement
                 </a>
             </div>
         </div>
@@ -25,11 +25,11 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Modül</th>
-                        <th>Tür</th>
-                        <th style="width:80px;">Sıra</th>
+                        <th>Module</th>
+                        <th>Type</th>
+                        <th style="width:80px;">Row</th>
                         <th>Durum</th>
-                        <th>İşlemler</th>
+                        <th>Transactions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -48,7 +48,7 @@
                         </td>
                         <td>
                             <a class="btn btn-sm btn-info align-top" href="{{ route('admin.blocks.edit', $block->id) }}">
-                                Düzenle
+                                Edit
                             </a>
                             <form action="{{ route('admin.blocks.destroy', $block->id) }}" method="POST"
                                 onsubmit="return confirm('Emin Misiniz?');" style="display: inline-block;">

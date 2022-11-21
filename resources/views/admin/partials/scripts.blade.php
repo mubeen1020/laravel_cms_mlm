@@ -41,8 +41,8 @@
                 method: 'post',
                 success: function (result) {
                     PNotify.success({
-                        title: 'Başarılı!',
-                        text: 'Durum Değiştirildi.',
+                        title: 'Successful!',
+                        text: 'Status Changed.',
                         delay: 2000
                     });
                 }
@@ -62,8 +62,8 @@
                 method: 'post',
                 success: function (result) {
                     PNotify.success({
-                        title: 'Başarılı!',
-                        text: 'Durum Değiştirildi.',
+                        title: 'Successful!',
+                        text: 'Status Changed.',
                         delay: 2000
                     });
                 }
@@ -79,8 +79,8 @@
                 success: function (result) {
                     $('.loading').addClass('d-none');
                     PNotify.success({
-                        title: 'Başarılı!',
-                        text: 'Önbellek Temizlendi.',
+                        title: 'Successful!',
+                        text: 'Cache Cleared.',
                         delay: 2000
                     });
                 }

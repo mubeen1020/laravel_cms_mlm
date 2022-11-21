@@ -4,14 +4,14 @@
 <div class="card">
     <div class="card-header">
         <div class="module-title">
-            Yeni Yetki Ekle
+            Add New Authorization
         </div>
     </div>
     <div class="card-body">
         <form action="{{ route("admin.roles.store") }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
-                <label for="name">Başlık*</label>
+                <label for="name">Title*</label>
                 <input type="text" id="name" name="name" class="form-control" value="{{ old('name', isset($role) ? $role->name : '') }}" required>
                 @if($errors->has('name'))
                     <em class="invalid-feedback">
@@ -20,9 +20,9 @@
                 @endif
             </div>
             <div class="form-group {{ $errors->has('permissions') ? 'has-error' : '' }}">
-                <label for="permission">İzinler*
-                    <span class="btn btn-info btn-sm select-all">Tümünü Seç</span>
-                    <span class="btn btn-info btn-sm deselect-all">Tümünü Bırak</span></label>
+                <label for="permission">Permissions*
+                    <span class="btn btn-info btn-sm select-all">Select all</span>
+                    <span class="btn btn-info btn-sm deselect-all">Drop All</span></label>
                 <select name="permission[]" id="permission" class="form-control select2" multiple="multiple" required>
                     @foreach($permissions as $id => $permissions)
                         <option value="{{ $id }}" {{ (in_array($id, old('permission', [])) || isset($role) && $role->permissions->contains($id)) ? 'selected' : '' }}>{{ $permissions }}</option>
@@ -35,7 +35,7 @@
                 @endif
             </div>
             <div>
-                <input class="btn btn-danger" type="submit" value="Kaydet">
+                <input class="btn btn-danger" type="submit" value="Save">
             </div>
         </form>
     </div>

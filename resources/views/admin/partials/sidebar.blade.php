@@ -1,6 +1,6 @@
 <div class="navbar nav_title" style="border: 0;">
     <a href="{{route('admin.dashboard')}}" class="site_title text-center">
-        <span>Yönetim Paneli</span>
+        <span>Admin Panel</span>
     </a>
 </div>
 <div class="clearfix"></div>
@@ -11,60 +11,60 @@
 
             <li class="{{ Route::currentRouteName() == 'admin.dashboard' ? 'active' : '' }}">
                 <a href="{{route('admin.dashboard')}}">
-                    <i class="fa fa-home"></i> Anasayfa
+                    <i class="fa fa-home"></i> Home
                 </a>
             </li>
 
             <li class="{{ isset(request()->type) ? 'active' : '' }}">
                 <a>
-                    <i class="fa fa-file-text-o"></i> İçerik Yönetimi
+                    <i class="fa fa-file-text-o"></i>Content Management
                     <span class="fa fa-chevron-down"></span>
                 </a>
                 <ul class="nav child_menu" style="{{ isset(request()->type) ? 'display:block;' : '' }}">
-                    <li class="{{ request()->type == 1 ? 'current-page' : '' }}"><a href="{{route('admin.posts.index')}}?type=1">İçerikler</a></li>
-                    <li class="{{ request()->type == 2 ? 'current-page' : '' }}"><a href="{{route('admin.posts.index')}}?type=2">Ürünler</a></li>
-                    <li><a href="{{route('admin.categories.index')}}">Kategoriler</a></li>
+                    <li class="{{ request()->type == 1 ? 'current-page' : '' }}"><a href="{{route('admin.posts.index')}}?type=1">Contents</a></li>
+                    <li class="{{ request()->type == 2 ? 'current-page' : '' }}"><a href="{{route('admin.posts.index')}}?type=2">Products</a></li>
+                    <li><a href="{{route('admin.categories.index')}}">Categories</a></li>
                 </ul>
             </li>
             <li>
                 <a href="{{route('admin.menus')}}">
-                    <i class="fa fa-bars"></i> Menü Yönetimi
+                    <i class="fa fa-bars"></i> Menu Management
                 </a>
             </li>  
             
             <li>
                 <a href="{{route('admin.blocks.index')}}">
-                    <i class="fa fa-arrows"></i> Yerleşim Yönetimi
+                    <i class="fa fa-arrows"></i> Settlement Management
                 </a>
             </li>
 
             <li>
                 <a href="{{route('admin.language-values.index')}}">
-                    <i class="fa fa-globe"></i> Dil Parametreleri
+                    <i class="fa fa-globe"></i> Language Parameters
                 </a>
             </li>
 
             <li>
                 <a href="{{route('admin.form-data')}}">
-                    <i class="fa fa-edit"></i> Form Başvuruları
+                    <i class="fa fa-edit"></i> Form Applications
                 </a>
             </li>
 
             <li>
                 <a>
-                    <i class="fa fa-users"></i> Yönetici İşlemleri
+                    <i class="fa fa-users"></i> Admin Actions
                     <span class="fa fa-chevron-down"></span>
                 </a>
                 <ul class="nav child_menu">
-                    <li><a href="{{route('admin.admins.index')}}">Yöneticiler</a></li>
-                    <li><a href="{{route('admin.roles.index')}}">Yetkiler</a></li>
-                    <li><a href="{{route('admin.permissions.index')}}">İzinler</a></li>
+                    <li><a href="{{route('admin.admins.index')}}">Managers</a></li>
+                    <li><a href="{{route('admin.roles.index')}}">Powers</a></li>
+                    <li><a href="{{route('admin.permissions.index')}}">Permissions</a></li>
                 </ul>
             </li>
 
             <li>
                 <a href="{{ route('admin.settings') }}">
-                    <i class="fa fa-cog"></i> Sistem Ayarları
+                    <i class="fa fa-cog"></i> System Settings
                 </a>
             </li>
 
@@ -73,16 +73,16 @@
 </div>
 
 <div class="sidebar-footer hidden-small">
-    <a href="{{url('/')}}" target="_blank" data-toggle="tooltip" data-placement="top" title="Siteyi Görüntüle">
+    <a href="{{url('/')}}" target="_blank" data-toggle="tooltip" data-placement="top" title="View Site">
         <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
     </a>
-    <a id="clear-cache" data-toggle="tooltip" data-placement="top" title="Önbellek Temizle">
+    <a id="clear-cache" data-toggle="tooltip" data-placement="top" title="Clear Cache">
         <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
     </a>
-    <a href="{{ route('admin.settings') }}" data-toggle="tooltip" data-placement="top" title="Sistem Ayarları">
+    <a href="{{ route('admin.settings') }}" data-toggle="tooltip" data-placement="top" title="System settings">
         <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
     </a>
-    <a href="{{ route('admin.logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" data-toggle="tooltip" data-placement="top" title="Çıkış Yap">
+    <a href="{{ route('admin.logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" data-toggle="tooltip" data-placement="top" title="Log out">
         <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
     </a>
 </div>

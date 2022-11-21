@@ -7,12 +7,12 @@
         <div class="row">
             <div class="col-6">
                 <div class="module-title">
-                    Kategori Listesi
+                    Category List
                 </div>
             </div>
             <div class="col-6 text-right">
                 <a class="btn btn-sm btn-success" href="{{ route("admin.categories.create") }}">
-                    Kategori Ekle
+                    Category Disgusting
                 </a>
             </div>
         </div>
@@ -23,11 +23,11 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Başlık</th>
-                        <th>Üst Kategori</th>
-                        <th style="width:80px;">Sıra</th>
+                        <th>Title</th>
+                        <th>Top Category</th>
+                        <th style="width:80px;">Row</th>
                         <th>Durum</th>
-                        <th>İşlemler</th>
+                        <th>Transactions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -59,7 +59,7 @@
                                 <i class="fa fa-arrow-right"></i> Git
                             </a>
                             <a class="btn btn-sm btn-info align-top" href="{{ route('admin.categories.edit', $category->id) }}">
-                                <i class="fa fa-pencil"></i> Düzenle
+                                <i class="fa fa-pencil"></i> Edit
                             </a>
                             <form action="{{ route('admin.categories.destroy', $category->id) }}" method="POST"
                                 onsubmit="return confirm('Emin Misiniz?');" style="display: inline-block;">

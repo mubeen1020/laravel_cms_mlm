@@ -30,11 +30,11 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-usermenu pull-right"
                                     aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('admin.change-password') }}"> Şifremi
-                                        Değiştir</a>
+                                    <a class="dropdown-item" href="{{ route('admin.change-password') }}"> $frame
+                                        Change</a>
                                     <a class="dropdown-item" href="{{ route('admin.logout') }}"
                                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                        Çıkış Yap
+                                        Log out
                                     </a>
                                 </div>
                             </li>

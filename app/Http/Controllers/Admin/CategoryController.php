@@ -40,7 +40,7 @@ class CategoryController extends Controller
 
         Category::create($request->except('_token'));
 
-        return redirect()->route('admin.categories.index')->with('success', 'Kategori Eklendi.');
+        return redirect()->route('admin.categories.index')->with('success', 'Category Added.');
     }
 
     public function update(Request $request, Category $category)
@@ -51,13 +51,13 @@ class CategoryController extends Controller
         ]);
 
         $category->update($request->except('_method','_token'));
-        return redirect()->route('admin.categories.index')->with('success', 'Kategori Güncellendi.');
+        return redirect()->route('admin.categories.index')->with('success', 'Category Updated.');
     }
 
     public function destroy(Category $category)
     {
         $category->delete();
-        return redirect()->route('admin.categories.index')->with('success', 'Kategori Silindi.');
+        return redirect()->route('admin.categories.index')->with('success', 'Category Deleted.');
     }
 
 }

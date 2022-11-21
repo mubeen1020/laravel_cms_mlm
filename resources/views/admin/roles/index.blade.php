@@ -6,13 +6,13 @@
         <div class="row">
             <div class="col-6">
                 <div class="module-title">
-                    Yetki Listesi
+                    Authorization List
                 </div>
             </div>
             @can('users_manage')
             <div class="col-6 text-right">
                 <a class="btn btn-sm btn-success" href="{{ route("admin.roles.create") }}">
-                    Yetki Ekle
+                    Add Authorization
                 </a>
             </div>
             @endcan
@@ -25,9 +25,9 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Başlık</th>
-                        <th>İzinler</th>
-                        <th>İşlemler</th>
+                        <th>Title</th>
+                        <th>Permissions</th>
+                        <th>Transactions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -46,10 +46,10 @@
                             </td>
                             <td>
                                 <a class="btn btn-sm btn-info align-top" href="{{ route('admin.roles.edit', $role->id) }}">
-                                    Düzenle
+                                    Edit
                                 </a>
 
-                                <form action="{{ route('admin.roles.destroy', $role->id) }}" method="POST" onsubmit="return confirm('Emin Misiniz?');" style="display: inline-block;">
+                                <form action="{{ route('admin.roles.destroy', $role->id) }}" method="POST" onsubmit="return confirm('Are you sure?');" style="display: inline-block;">
                                     <input type="hidden" name="_method" value="DELETE">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     <input type="submit" class="btn btn-sm btn-danger" value="Sil">

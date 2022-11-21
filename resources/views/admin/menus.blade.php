@@ -15,18 +15,18 @@ $currentUrl = url()->current();
 
                             <div class="manage-menus">
                                 <form method="get" action="{{ $currentUrl }}">
-                                    <label for="menu" class="selected-menu">Düzenlemek istediğiniz menüyü seçin:</label>
+                                    <label for="menu" class="selected-menu">To organise choose the menu you want:</label>
 
                                     {!! $menu_list_html !!}
 
                                     <span class="submit-btn">
                                         <input type="submit" class="button-secondary" value="Seç">
                                     </span>
-                                    <span class="add-new-menu-action"> veya <a
-                                            href="{{ $currentUrl }}?action=edit&menu=0">Yeni Menü Oluştur</a>. </span>
+                                    <span class="add-new-menu-action"> or <a
+                                            href="{{ $currentUrl }}?action=edit&menu=0">Create New Menu</a>. </span>
                                 </form>
                             </div>
-                            <div id="nav-menus-frame" style="{{ !request()->has('menu') || request()->input("menu") == 0 ? "margin-left: 0;width: 50%;" : "" }}">
+                            <div id="nav-menus-frame" style="{{ !request()->has('menu') || request()->input("menu") == 0 ? margin-left: 0;width: 50%; :  }}>
 
                                 @if(request()->has('menu') && !empty(request()->input("menu")))
                                 <div id="menu-settings-column" class="metabox-holder" >
@@ -39,7 +39,7 @@ $currentUrl = url()->current();
                                             <ul class="outer-border">
                                                 <li class="control-section accordion-section  open add-page"
                                                     id="add-page">
-                                                    <h3 class="accordion-section-title hndle" tabindex="0"> Özel Link
+                                                    <h3 class="accordion-section-title hndle" tabindex="0"> Private Link
                                                         <span class="screen-reader-text">Press return or enter to
                                                             expand</span></h3>
                                                     <div class="accordion-section-content ">
@@ -48,7 +48,7 @@ $currentUrl = url()->current();
 
                                                                 <p id="menu-item-name-wrap">
                                                                     <label class="howto" for="custom-menu-item-name">
-                                                                        <span>Başlık</span>&nbsp;
+                                                                        <span>Title</span>&nbsp;
                                                                         <input id="custom-menu-item-name" name="label"
                                                                             type="text"
                                                                             class="regular-text menu-item-textbox input-with-default-title">
@@ -64,9 +64,9 @@ $currentUrl = url()->current();
 
                                                                 <p class="button-controls">
                                                                     <a href="#" onclick="addcustommenu()"
-                                                                        class="button-secondary submit-add-to-menu right">Menüye
-                                                                        Ekle</a>
-                                                                    <span class="spinner" id="spincustomu"></span>
+                                                                        class="button-secondary submit-add-to-menu right">to the menu
+                                                                        Add</a>
+                                                                    <span class="spinner" id="spin custom"></span>
                                                                 </p>
 
                                                             </div>
@@ -88,7 +88,7 @@ $currentUrl = url()->current();
                                                 <div id="nav-menu-header">
                                                     <div class="major-publishing-actions">
                                                         <label class="menu-name-label howto open-label" for="menu-name">
-                                                            <span>Menü Adı</span>
+                                                            <span>Menu Name</span>
                                                             <input name="menu-name" id="menu-name" type="text"
                                                                 class="menu-name regular-text menu-item-textbox"
                                                                 title="Enter menu name"
@@ -101,22 +101,22 @@ $currentUrl = url()->current();
                                                         <div class="publishing-action">
                                                             <a onclick="createnewmenu()" name="save_menu"
                                                                 id="save_menu_header"
-                                                                class="button button-primary menu-save">Menü Oluştur</a>
+                                                                class="button button-primary menu-save">Create Menu</a>
                                                         </div>
                                                         @elseif(request()->has("menu"))
                                                         <div class="publishing-action">
                                                             <a onclick="getmenus()" name="save_menu"
                                                                 id="save_menu_header"
-                                                                class="button button-primary menu-save">Menüyü
-                                                                Kaydet</a>
-                                                            <span class="spinner" id="spincustomu2"></span>
+                                                                class="button button-primary menu-save">Menu
+                                                                Save</a>
+                                                            <span class="spinner" id="spin custom"></span>
                                                         </div>
 
                                                         @else
                                                         <div class="publishing-action">
                                                             <a onclick="createnewmenu()" name="save_menu"
                                                                 id="save_menu_header"
-                                                                class="button button-primary menu-save">Menü Oluştur</a>
+                                                                class="button button-primary menu-save">Create Menu</a>
                                                         </div>
                                                         @endif
                                                     </div>
@@ -138,7 +138,7 @@ $currentUrl = url()->current();
                                                                                 <span
                                                                                     style="color: transparent;">|{{$m->id}}|</span>
                                                                             </span> <span class="is-submenu"
-                                                                                style="@if($m->depth==0)display: none;@endif">Alt eleman</span>
+                                                                                style="@if($m->depth==)display: none;@endif">sub-element</span>
                                                                         </span>
                                                                         <span class="item-controls"> <span
                                                                                 class="item-type">Link</span> <span
@@ -162,7 +162,7 @@ $currentUrl = url()->current();
                                                                         name="menuid_{{$m->id}}" value="{{$m->id}}" />
                                                                     <p class="description description-thin">
                                                                         <label for="edit-menu-item-title-{{$m->id}}">
-                                                                            Başlık
+                                                                            Title
                                                                             <br>
                                                                             <input type="text"
                                                                                 id="idlabelmenu_{{$m->id}}"
@@ -198,14 +198,14 @@ $currentUrl = url()->current();
 
                                                                     <p
                                                                         class="field-move hide-if-no-js description description-wide">
-                                                                        <label> <span>Taşı:</span> <a
+                                                                        <label> <span>Move:</span> <a
                                                                                 href="{{ $currentUrl }}"
                                                                                 class="menus-move-up"
-                                                                                style="display: none;">Yukarı</a> <a
+                                                                                style="display: none;">Above</a> <a
                                                                                 href="{{ $currentUrl }}"
                                                                                 class="menus-move-down"
                                                                                 title="Mover uno abajo"
-                                                                                style="display: inline;">Aşağı</a>
+                                                                                style="display: inline;">Down</a>
                                                                             <a href="{{ $currentUrl }}"
                                                                                 class="menus-move-left"
                                                                                 style="display: none;"></a> <a
@@ -214,7 +214,7 @@ $currentUrl = url()->current();
                                                                                 style="display: none;"></a> <a
                                                                                 href="{{ $currentUrl }}"
                                                                                 class="menus-move-top"
-                                                                                style="display: none;">İlk Sıra</a> </label>
+                                                                                style="display: none;">First line</a> </label>
                                                                     </p>
 
                                                                     <div
@@ -226,12 +226,12 @@ $currentUrl = url()->current();
                                                                         <span class="meta-sep hide-if-no-js"> | </span>
                                                                         <a class="item-cancel submitcancel hide-if-no-js button-secondary"
                                                                             id="cancel-{{$m->id}}"
-                                                                            href="{{ $currentUrl }}?edit-menu-item={{$m->id}}&cancel=1424297719#menu-item-settings-{{$m->id}}">Vazgeç</a>
+                                                                            href="{{ $currentUrl }}?edit-menu-item={{$m->id}}&cancel=1424297719#menu-item-settings-{{$m->id}}">Give Up</a>
                                                                         <span class="meta-sep hide-if-no-js"> | </span>
                                                                         <a onclick="getmenus()"
                                                                             class="button button-primary updatemenu"
                                                                             id="update-{{$m->id}}"
-                                                                            href="javascript:void(0)">Güncelle</a>
+                                                                            href="javascript:void(0)">Update</a>
 
                                                                     </div>
 
@@ -253,19 +253,19 @@ $currentUrl = url()->current();
                                                         <div class="publishing-action">
                                                             <a onclick="createnewmenu()" name="save_menu"
                                                                 id="save_menu_header"
-                                                                class="button button-primary menu-save">Menü Oluştur</a>
+                                                                class="button button-primary menu-save">Create Menu</a>
                                                         </div>
                                                         @elseif(request()->has("menu"))
                                                         <span class="delete-action"> <a
                                                                 class="submitdelete deletion menu-delete"
-                                                                onclick="deletemenu()" href="javascript:void(9)">Menüyü
+                                                                onclick="deletemenu()" href="javascript:void(9)">Menu
                                                                 Sil</a> </span>
                                                         <div class="publishing-action">
 
                                                             <a onclick="getmenus()" name="save_menu"
                                                                 id="save_menu_header"
-                                                                class="button button-primary menu-save">Menüyü
-                                                                Kaydet</a>
+                                                                class="button button-primary menu-save">Menu
+                                                                Save</a>
                                                             <span class="spinner" id="spincustomu2"></span>
                                                         </div>
 
@@ -273,7 +273,7 @@ $currentUrl = url()->current();
                                                         <div class="publishing-action">
                                                             <a onclick="createnewmenu()" name="save_menu"
                                                                 id="save_menu_header"
-                                                                class="button button-primary menu-save">Menü Oluştur</a>
+                                                                class="button button-primary menu-save">Create Menu</a>
                                                         </div>
                                                         @endif
                                                     </div>
@@ -303,15 +303,15 @@ $currentUrl = url()->current();
 <script>
     var menus = {
         "oneThemeLocationNoMenus": "",
-        "moveUp": "Yukarı",
-        "moveDown": "Aşağı",
-        "moveToTop": "İlk Sıra",
+        "moveUp": "Above",
+        "moveDown": "Down",
+        "moveToTop": "First line",
         "moveUnder": "Move under of %s",
-        "moveOutFrom": "%s elemanının altından çıkar",
+        "moveOutFrom": "%s Subtract from element",
         "under": "Under %s",
-        "outFrom": "%s elemanının altından çıkar",
+        "outFrom": "%s come out from under the element",
         "menuFocus": "%1$s. Element menu %2$d of %3$d.",
-        "subMenuFocus": "%1$s. Menu of subelement %2$d of %3$s."
+        "subMenuFocus": "%1$s. Menu of sub element %2$d of %3$s."
     };
     var arraydata = [];
     var addcustommenur = '{{ route("admin.menus.item.create") }}';

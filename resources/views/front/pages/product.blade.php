@@ -101,7 +101,7 @@
             <div class="row list small gutter">
                 @foreach ($related_products as $related_product)
                 <div class="col-lg-3 col-md-4 col-sm-6">
-                    <a href="{{ get_url($related_product->type->key, $related_product->slug) }}" class="hizmet-card ">
+                    <a href="{{ get_url($related_product->type->key, $related_product->slug) }}" class="service-card ">
                         <div class="hizmet-card-photo">
                             <img src="{{asset($related_product->thumbnail)}}">
                         </div>

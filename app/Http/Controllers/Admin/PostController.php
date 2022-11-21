@@ -65,7 +65,7 @@ class PostController extends Controller
 
         $post->categories()->attach($request->category_ids);
 
-        return redirect()->route('admin.posts.edit',$post->id)->with('success', 'İçerik Eklendi.');;
+        return redirect()->route('admin.posts.edit',$post->id)->with('success', 'Content Added.');;
     }
 
     public function update(Request $request, Post $post)
@@ -93,7 +93,7 @@ class PostController extends Controller
 
         $post->categories()->sync($request->category_ids);
 
-        return redirect()->back()->with('success', 'İçerik Güncellendi.');;
+        return redirect()->back()->with('success', 'Content Updated.');;
     }
 
     public function store_media(Request $request)
@@ -119,7 +119,7 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
-        return redirect()->route('admin.posts.index')->with('success', 'İçerik Silindi.');
+        return redirect()->route('admin.posts.index')->with('success', 'Content Deleted.');
     }
 
 }

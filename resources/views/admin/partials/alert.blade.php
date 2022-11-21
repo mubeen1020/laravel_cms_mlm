@@ -6,7 +6,7 @@ PNotify.defaults.icons = 'fontawesome4';
 <script type="text/javascript">
     $(document).ready(function(){
         PNotify.success({
-            title: 'Başarılı!',
+            title: 'Successful!',
             text: '{{ session('success') }}',
             delay: 2000
         });
@@ -18,7 +18,7 @@ PNotify.defaults.icons = 'fontawesome4';
 <script type="text/javascript">
     $(document).ready(function(){
         PNotify.error({
-            title: 'Hata!',
+            title: 'Even!',
             text: '{{ session('alert') }}',
             delay: 2000
         });

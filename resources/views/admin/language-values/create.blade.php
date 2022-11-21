@@ -4,9 +4,9 @@
 <div class="card">
     <div class="card-header">
         @if(isset($value))
-        Dil Parametresi Düzenle
+        Edit Language Parameter
         @else
-        Yeni Dil Parametresi Ekle
+        Add New Language Parameter
         @endif
     </div>
     <div class="card-body">
@@ -18,7 +18,7 @@
         @endif
 
         <div class="form-group {{ $errors->has('group') ? 'has-error' : '' }}">
-            {{ Form::label('group', 'Grup*') }}
+            {{ Form::label('group', 'Group*') }}
             {{ Form::text('group', old('group'), ['class'=>'form-control']) }}
             @if($errors->has('group'))
                 <em class="invalid-feedback d-block">
@@ -28,7 +28,7 @@
         </div>
 
         <div class="form-group {{ $errors->has('key') ? 'has-error' : '' }}">
-            {{ Form::label('key', 'Parametre*') }}
+            {{ Form::label('key', 'Parameters*') }}
             {{ Form::text('key', old('key'), ['class'=>'form-control']) }}
             @if($errors->has('key'))
                 <em class="invalid-feedback d-block">

@@ -11,17 +11,17 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="module-title">
-                    Dil Parametleri
+                   Language Parameters
                 </div>
             </div>
             <div class="col-md-2">
                 <button class="btn btn-sm btn-success btn-block" onclick="update_all()">
-                    Tümünü Kaydet
+                    Save All
                 </button>
             </div>
             <div class="col-md-2">
                 <a class="btn btn-sm btn-primary btn-block" href="{{ route("admin.language-values.create") }}">
-                    Yeni Parametre Ekle
+                    Add New Parameter
                 </a>
             </div>
         </div>
@@ -34,12 +34,12 @@
                 <table class="table table-bordered table-striped table-hover">
                     <thead>
                         <tr>
-                            <th>Grup</th>
-                            <th>Parametre</th>
+                            <th>Group</th>
+                            <th>Parameters</th>
                             @foreach($languages as $language)
                             <th>{{$language}}</th>
                             @endforeach
-                            <th>İşlem</th>
+                            <th>Process</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -56,7 +56,7 @@
                             <td>
                                 <a class="btn btn-sm btn-info align-top"
                                     href="{{ route('admin.language-values.edit', $value->id) }}">
-                                    Düzenle
+                                   Edit
                                 </a>
                                 <a class="btn btn-sm btn-danger align-top"
                                     href="{{ route('admin.language-values.edit', $value->id) }}">
@@ -72,7 +72,7 @@
         <div class="row">
             <div class="col-md-2">
                 <button class="btn btn-sm btn-success btn-block" onclick="update_all()">
-                    Tümünü Kaydet
+                    Save All
                 </button>
             </div>
         </div>

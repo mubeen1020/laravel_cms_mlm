@@ -22,11 +22,11 @@ class ChangePasswordController extends Controller
         {
           $user->password = bcrypt($request->password);
           $user->save();
-          return back()->with('success', 'Şifreniz Değiştirildi');
+          return back()->with('success', 'Your Password Has Been Changed');
         }
         else {
           {
-            return back()->with('alert', 'Şifreniz Değiştirilemedi');
+            return back()->with('alert', 'Your Password Could Not Be Changed');
           }
         }
     }

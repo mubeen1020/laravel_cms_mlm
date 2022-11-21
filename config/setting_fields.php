@@ -3,7 +3,7 @@
 return [
 
     'app' => [
-        'title' => 'Genel',
+        'title' => 'General',
         'desc' => '',
         'icon' => 'fa fa-home',
         'elements' => [
@@ -11,21 +11,21 @@ return [
                 'type' => 'text',
                 'data' => 'string',
                 'name' => 'title',
-                'label' => 'Site Başlığı',
+                'label' => 'Site Title',
                 'rules' => 'required|min:2|max:50'
             ],
             [
                 'type' => 'textarea',
                 'data' => 'string',
                 'name' => 'description',
-                'label' => 'SEO Açıklama',
+                'label' => 'SEO Description',
                 'rules' => ''
             ],
             [
                 'type' => 'textarea',
                 'data' => 'string',
                 'name' => 'keywords',
-                'label' => 'SEO Etiketler',
+                'label' => 'SEO Tags',
                 'rules' => ''
             ],
             [
@@ -38,14 +38,14 @@ return [
             [
                 'name' => 'email',
                 'type' => 'email',
-                'label' => 'E-Posta',
+                'label' => 'Email',
                 'rules' => 'email',
             ],
             [
                 'type' => 'text',
                 'data' => 'string',
                 'name' => 'phone',
-                'label' => 'Telefon',
+                'label' => 'Telephone',
                 'rules' => ''
             ], 
             [
@@ -66,43 +66,43 @@ return [
                 'type' => 'text',
                 'data' => 'string',
                 'name' => 'address',
-                'label' => 'Adres',
+                'label' => 'Address',
                 'rules' => ''
             ],
             [
                 'type' => 'text',
                 'data' => 'string',
                 'name' => 'map',
-                'label' => 'Harita Url',
+                'label' => 'Map Url',
                 'rules' => ''
             ],
         ]
     ],
 
     'email' => [
-        'title' => 'E-Posta',
+        'title' => 'Email',
         'desc' => '',
-        'icon' => 'fa fa-envelope',
+        'icon' => 'fa-envelope',
         'elements' => [
             [
                 'type' => 'text',
                 'data' => 'string',
                 'name' => 'mail_host',
-                'label' => 'E-Posta Sunucusu',
+                'label' => 'E-Mail Server',
                 'rules' => ''
             ],
             [
                 'type' => 'text',
                 'data' => 'string',
                 'name' => 'mail_username',
-                'label' => 'E-Posta Adresi',
+                'label' => 'E-mail address',
                 'rules' => ''
             ],
             [
                 'type' => 'text',
                 'data' => 'string',
                 'name' => 'mail_password',
-                'label' => 'Şifre',
+                'label' => 'Password',
                 'rules' => ''
             ],
             [
@@ -113,14 +113,14 @@ return [
                     'tls' => 'TLS',
                 ],
                 'name' => 'mail_encryption',
-                'label' => 'Şifreleme Türü',
+                'label' => 'Encryption Type',
                 'rules' => ''
             ],
             [
                 'type' => 'text',
                 'data' => 'string',
                 'name' => 'mail_from_name',
-                'label' => 'Hangi İsim ile Gönderilsin',
+                'label' => 'What Name Should You Send With?',
                 'rules' => ''
             ],
         ]

@@ -14,30 +14,30 @@
         <div class="row">
             <div class="col-md-2">
                 <div class="module-title">
-                    İçerik Listesi
+                    Content List
                 </div>
             </div>
             <div class="col-md-8 filters">
                 {{ Form::open(['route' => 'admin.posts.index', 'method' => 'GET']) }}
                 <div class="row">
                     <div class="col-md-3">
-                        {{ Form::text('name', Request::get('name'), ['placeholder' => 'Başlık', 'class'=>'form-control']) }}
+                        {{ Form::text('name', Request::get('name'), ['placeholder' => 'Title', 'class'=>'form-control']) }}
                     </div>
                     <div class="col-md-3">
                         {{ Form::select('type', \App\Enums\PostType::toSelectArray(), Request::get('type'), ['placeholder' => 'Tüm Türler', 'class'=>'form-control']) }}
                     </div>
                     <div class="col-md-3">
-                        {{ Form::select('category', $categories, Request::get('category'), ['placeholder' => 'Tüm Kategoriler', 'class'=>'form-control']) }}
+                        {{ Form::select('category', $categories, Request::get('category'), ['placeholder' => 'All Categories', 'class'=>'form-control']) }}
                     </div>
                     <div class="col-md-3">
-                        <button class="btn btn-sm btn-primary">Filtrele</button>
+                        <button class="btn btn-sm btn-primary">The filters</button>
                     </div>
                 </div>
                 {{ Form::close() }}
             </div>
             <div class="col-md-2 text-right">
                 <a class="btn btn-sm btn-block btn-success" href="{{ route("admin.posts.create") }}">
-                    İçerik Ekle
+                    Add Content
                 </a>
             </div>
         </div>
@@ -48,12 +48,12 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Başlık</th>
-                        <th>Tür</th>
-                        <th>Kategori</th>
+                        <th>Title</th>
+                        <th>Type</th>
+                        <th>Category</th>
                         <th style="width:80px;">Sıra</th>
                         <th>Durum</th>
-                        <th>İşlemler</th>
+                        <th>Transactions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -81,7 +81,7 @@
                                 <i class="fa fa-arrow-right"></i> Git
                             </a>
                             <a class="btn btn-sm btn-info align-top" href="{{ route('admin.posts.edit', $post->id) }}">
-                                <i class="fa fa-pencil"></i> Düzenle
+                                <i class="fa fa-pencil"></i> Edit
                             </a>
                             <form action="{{ route('admin.posts.destroy', $post->id) }}" method="POST"
                                 onsubmit="return confirm('Emin Misiniz?');" style="display: inline-block;">

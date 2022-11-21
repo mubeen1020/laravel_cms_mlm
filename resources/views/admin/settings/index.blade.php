@@ -27,7 +27,7 @@
     @endif
 
     <button class="btn-primary btn">
-        Kaydet
+        Save
     </button>
 </form>
 

@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-6">
                 <div class="module-title">
-                    Form Başvuruları
+                   Form Applications
                 </div>
             </div>
         </div>
@@ -18,12 +18,12 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Form Türü</th>
-                        <th>Tarih</th>
+                        <th>Form Type</th>
+                        <th>History</th>
                         <th>Ad Soyad</th>
-                        <th>Telefon</th>
-                        <th>E-Posta</th>
-                        <th>Mesaj</th>
+                        <th>Telephone</th>
+                        <th>E-mail</th>
+                        <th>Message</th>
                     </tr>
                 </thead>
                 <tbody>

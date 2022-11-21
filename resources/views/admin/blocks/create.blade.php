@@ -4,11 +4,11 @@
 <div class="card">
     <div class="card-header">
         @if(isset($block))
-        Yerleşim Düzenle
+        Edit Placement
         @else
-        Yeni Yerleşim Ekle
+        Add New Placement
         @endif
-    </div>
+    </div>Edit Placement
     <div class="card-body">
         @if(isset($block))
         {{ Form::model($block, ['route' => ['admin.blocks.update', $block->id], 'method' => 'patch']) }}
@@ -31,10 +31,10 @@
                     </div>
                 </div>
                 <div class="form-group {{ $errors->has('model_id') ? 'has-error' : '' }}">
-                    {{Form::label('model_id', 'Eleman :')}}
+                    {{Form::label('model_id', 'Element :')}}
                     <div class="row">
                         <div class="col-md-3">
-                            {{ Form::select('model_id', [], null, ['placeholder' => 'Seçiniz', 'class'=>'form-control']) }}
+                            {{ Form::select('model_id', [], null, ['placeholder' => 'Choose', 'class'=>'form-control']) }}
                             @if($errors->has('model_id'))
                             <em class="invalid-feedback d-block">
                                 {{ $errors->first('model_id') }}
@@ -48,11 +48,11 @@
                     {{ Form::select('type', \App\Enums\BlockType::toSelectArray(), null, ['class'=>'form-control']) }}
                 </div>
                 <div class="form-group">
-                    {{Form::label('content', 'İçerik :')}}
+                    {{Form::label('content', 'Contents :')}}
                     {{ Form::textarea('content', null, ['class'=>'form-control']) }}
                 </div>
                 <div class="form-group">
-                    {{ Form::submit('Kaydet', ['class' => 'btn btn-danger']) }}
+                    {{ Form::submit('Save', ['class' => 'btn btn-danger']) }}
                 </div>
             </div>
         </div>

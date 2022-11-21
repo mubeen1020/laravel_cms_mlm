@@ -44,7 +44,7 @@ class BlockController extends Controller
       
         $block = Block::create($request->except('_token'));
 
-        return redirect()->route('admin.blocks.edit',$block->id)->with('success', 'Yerleşim Yönetimi Eklendi.');;
+        return redirect()->route('admin.blocks.edit',$block->id)->with('success', 'Settlement Management Added.');;
     }
 
     public function update(Request $request, Block $block)
@@ -56,13 +56,13 @@ class BlockController extends Controller
 
         $block->update($request->except('_method','_token'));
 
-        return redirect()->back()->with('success', 'Yerleşim Yönetimi Güncellendi.');;
+        return redirect()->back()->with('success', 'Settlement Management Updated.');;
     }
 
     public function destroy(Block $block)
     {
         $block->delete();
-        return redirect()->route('admin.blocks.index')->with('success', 'Yerleşim Yönetimi Silindi.');
+        return redirect()->route('admin.blocks.index')->with('success', 'Settlement Management Deleted.');
     }
 
 }

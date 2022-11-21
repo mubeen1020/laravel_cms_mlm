@@ -32,6 +32,6 @@ class SettingController extends Controller
             }
         }
 
-        return redirect()->back()->with('success', 'Ayarlar Güncellendi.');
+        return redirect()->back()->with('success', 'Settings Updated.');
     }
 }

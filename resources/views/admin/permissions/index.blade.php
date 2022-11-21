@@ -5,13 +5,13 @@
         <div class="row">
             <div class="col-6">
                 <div class="module-title">
-                    İzin Listesi
+                    Permission List
                 </div>
             </div>
             @can('users_manage')
             <div class="col-6 text-right">
                 <a class="btn btn-sm btn-success" href="{{ route("admin.permissions.create") }}">
-                    İzin Ekle
+                    Add Permission
                 </a>
             </div>
             @endcan
@@ -24,8 +24,8 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Başlık</th>
-                        <th>İşlemler</th>
+                        <th>Title</th>
+                        <th>Transactions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -40,7 +40,7 @@
                         <td>
                             <a class="btn btn-sm btn-info align-top"
                                 href="{{ route('admin.permissions.edit', $permission->id) }}">
-                                Düzenle
+                               Edit
                             </a>
 
                             <form action="{{ route('admin.permissions.destroy', $permission->id) }}" method="POST"

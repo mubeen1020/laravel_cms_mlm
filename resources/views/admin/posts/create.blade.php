@@ -6,9 +6,9 @@
     <div class="title_left">
         <h3>
             @if(isset($post))
-            İçerik Düzenle
+            Edit Content
             @else
-            Yeni İçerik Ekle
+            Add New Content
             @endif
         </h3>
     </div>
@@ -43,7 +43,7 @@
         
         <div class="x_panel mt-3">
             <div class="x_title">
-                <h2>İçerik</h2>
+                <h2>Contents</h2>
                 <ul class="nav navbar-right panel_toolbox">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
                 </ul>
@@ -54,13 +54,13 @@
                 <br />
                 <div class="ln_solid"></div>
                 <div class="form-group row mb-4">
-                    <label class="control-label col-md-3 col-sm-3 ">Kısa Açıklama:</label>
+                    <label class="control-label col-md-3 col-sm-3 ">Short Description:</label>
                     <div class="col-md-9 col-sm-9 ">
                         {{ Form::textarea('description', null, ['class'=>'form-control', 'rows'=>3]) }}
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="control-label col-md-3 col-sm-3 ">Etiketler:</label>
+                    <label class="control-label col-md-3 col-sm-3 ">Labels:</label>
                     <div class="col-md-9 col-sm-9 ">
                         {{ Form::textarea('tags', null, ['class'=>'form-control', 'rows'=>3]) }}
                     </div>
@@ -70,7 +70,7 @@
 
         <div class="x_panel mt-3">
             <div class="x_title">
-                <h2>Resim Galerisi</h2>
+                <h2>Image Gallery</h2>
                 <ul class="nav navbar-right panel_toolbox">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
                 </ul>
@@ -88,7 +88,7 @@
         <div class="widget widget_tally_box">
             <div class="x_panel ">
                 <div class="x_title">
-                    <h2>Kategoriler</h2>
+                    <h2>Categories</h2>
                     <ul class="nav navbar-right panel_toolbox">
                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
                     </ul>
@@ -121,7 +121,7 @@
             </div>
             @endif
             <div class="col-md-6">
-                {{ Form::submit('Kaydet', ['class' => 'btn btn-block btn-danger']) }}
+                {{ Form::submit('Save', ['class' => 'btn btn-block btn-danger']) }}
             </div>
         </div>
 
@@ -177,8 +177,8 @@
     var uploadedImagesMap = {}
     Dropzone.options.imagesDropzone = {
         url: '{{ route('admin.posts.store-media') }}',
-        dictRemoveFile: 'Resmi Sil',
-        dictDefaultMessage: 'Resimleri buraya sürükleyin veya tıklayın',
+        dictRemoveFile: 'Official Sil',
+        dictDefaultMessage: 'Drag or click pictures here',
         maxFilesize: 2, // MB
         addRemoveLinks: true,
         headers: {

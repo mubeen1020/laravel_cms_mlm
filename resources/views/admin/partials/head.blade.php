@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="images/favicon.ico" type="image/ico" />
 <meta name="_token" content="{{csrf_token()}}" />
-<title>Yönetim Paneli | {{setting('title')}}</title>
+<title>Management panel | {{setting('title')}}</title>
 <link href="{{asset('admin/css/bootstrap.min.css')}}" rel="stylesheet">
 <link href="{{asset('admin/css/font-awesome.min.css')}}" rel="stylesheet">
 <link href="{{asset('admin/css/nprogress.css')}}" rel="stylesheet">

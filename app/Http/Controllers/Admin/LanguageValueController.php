@@ -60,6 +60,6 @@ class LanguageValueController extends Controller
             LanguageLine::where('id',$id)->update(['text'=>$items]);
         }
 
-        return redirect()->route('admin.language-values.index')->with('success', 'Dil Tanımları Güncellendi.');;
+        return redirect()->route('admin.language-values.index')->with('success', 'Language Definitions Updated.');;
     }
 }

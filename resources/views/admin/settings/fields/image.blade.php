@@ -6,7 +6,7 @@
         <img src="{{ asset('storage/'.setting($field['name'])) }}" style="height:80px;">
         <br>
         <br>
-        Yeni Logo Yükle:<br>
+        Upload New Logo:<br>
         @endif
         <input type="file"
                name="{{ $field['name'] }}"
